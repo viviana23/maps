@@ -1,0 +1,11 @@
+    <ng-map zoom="17" center= "4.7196068,-74.0595802" map-type-id="SATELLITE">
+      <heatmap-layer id="foo" data="taxiData"></heatmap-layer>
+      <marker ng-repeat="pos in main.positions" position="{{pos.lat}},{{pos.lng}}"></marker>
+
+    </ng-map>
+    <div id="panel">
+      <button ng-click="main.toggleHeatmap()">Toggle Heatmap</button>
+      <button ng-click="main.changeGradient()">Change gradient</button>
+      <button ng-click="main.changeRadius()">Change radius</button>
+      <button ng-click="main.changeOpacity()">Change opacity</button>
+    </div>
